@@ -13,15 +13,15 @@ public class My_age_Program {
 	age = keyInput.nextInt();	
 		
 	if(age <= 18) {
-	System.out.println(name + ", you are too young for PornHub!");
+	System.out.println(name + ", you are too young for this page!");
 	} else if (age <= 30) {
-		System.out.println(name + ", your fap is granted, young padawan!");
+		System.out.println(name + ", your access is granted, young padawan!");
 	} else if (age <= 45) {
-		System.out.println(name + ", you should be on mature + website!");
+		System.out.println(name + ", you should be on Github!");
 	} else if (age <= 65) {
-		System.out.println(name + ", take the blue pill!");
+		System.out.println(name + ", take the red pill!");
 	} else if (age <= 85) {
-		System.out.println(name + ", you should call an undertaker!");
+		System.out.println(name + ", you should senior developer by this point!");
 	} else {
 		System.out.println (name + ", let's be real, you will not reach this age...");
 	}
