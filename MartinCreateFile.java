@@ -1,28 +1,29 @@
 import java.util.*;
 public class MartinCreateFile {
 
-	public Formatter x;  //This will hold formatter object in variable named x
+	public Formatter formatter;  //This will hold formatter object in variable named x
 	
 	public void openFile() {  //now we make a method to create and open file
 		try {
-			x = new Formatter("MartinVojkovic.txt");  //here we make a .txt file in x
+			formatter = new Formatter("MartinVojkovic.txt");  //here we make a .txt file in x
+		}catch (Exception e){
+			System.out.println("Unable to create File");
+			System.out.println(e);
 		}
-		catch (Exception e){
-			System.out.println("Your have an error");
-		}
-	
-	
 	}
+	
 	public void addRecord() {  //here we add a record to our file
-		x.format("%s%s%s", "27 ", "Martin ", "Vojkovic");
+		formatter.format("%s%s%s", "27 ", "Martin ", "Vojkovic");
 	}
+	
 	public void closeFile() {
-		x.close();
+		formatter.close();
 	}
+	
 	public static void main (String [] args){
-		MartinCreateFile g = new MartinCreateFile();
-		g.openFile();
-		g.addRecord();
-		g.closeFile();
+		MartinCreateFile g = new MartinCreateFile(); #this cannot work 
+		g.openFile(); #does it work ?
+		g.addRecord(); #how tf does it work?
+		g.closeFile(); #MartinCreateFile is name of your class not method 
 	}
 }
