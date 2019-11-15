@@ -2,11 +2,12 @@
 import java.util.Scanner;
 public class My_age_Program {
 
-	public static Scanner keyInput = new Scanner (System.in);
-	public static int age;
-	public static String name;
-	
 	public static void main(String args[]) {
+	
+	Scanner keyInput = new Scanner (System.in);
+	int age;
+	String name;	
+		
 	System.out.println("Enter your name: ");
 	name = keyInput.nextLine();
 		
@@ -14,7 +15,7 @@ public class My_age_Program {
 	age = keyInput.nextInt();	
 		
 	if(age <= 18) {
-	System.out.println(name + ", you are too young for this page!");
+	        System.out.println(name + ", you are too young for this page!");
 	} else if (age <= 30) {
 		System.out.println(name + ", your access is granted, young padawan!");
 	} else if (age <= 45) {
