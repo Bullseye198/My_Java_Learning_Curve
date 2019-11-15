@@ -1,11 +1,11 @@
 import java.util.*;
 public class MartinCreateFile {
 
-	public Formatter formatter;  //This will hold formatter object in variable named x
+	public Formatter formatter;  //This will hold formatter object in variable named formatter
 	
 	public void openFile() {  //now we make a method to create and open file
 		try {
-			formatter = new Formatter("MartinVojkovic.txt");  //here we make a .txt file in x
+			formatter = new Formatter("MartinVojkovic.txt");  //here we make a .txt file in formatter
 		}catch (Exception e){
 			System.out.println("Unable to create File");
 			System.out.println(e);
