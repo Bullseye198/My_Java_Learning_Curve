@@ -11,15 +11,19 @@ public class Input_Based_File_Writer {
 	
 	public static void main(String[] args) {
 		try {
+		Scanner keyInput = new Scanner(System.in);
+		PrintWriter writer;
+		String txtName, txtBody;
+		
 		System.out.println("Enter the name of .txt file: ");
 		
 		txtName = keyInput.next();
 		
-		writer2 = new PrintWriter(txtName, txtBody);
+		writer = new PrintWriter(txtName, txtBody); #Prblem is here
 		
 		System.out.println("Enter the text body: ");
 		
-		writer2.println(txtBody);
+		writer.println(txtBody);
 		txtBody = keyInput.next();
 		
 		}
