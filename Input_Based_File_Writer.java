@@ -3,29 +3,27 @@ import java.io.PrintWriter;
 
 public class Input_Based_File_Writer {
 
-	public static Scanner keyInput = new Scanner (System.in);
-	public static PrintWriter writer;
-	public static String txtName, txtBody;
-	private static PrintWriter writer2;
-	
-	
-	public static void main(String[] args) {
-		try {
+	static Scanner keyInput = new Scanner (System.in);
+	static PrintWriter writer;
+	static String txtName, txtBody;
+
+	public static void main (String arg []) {
+		
+		
+		
+		try {	
+			
 		System.out.println("Enter the name of .txt file: ");
-		
 		txtName = keyInput.next();
-		
-		writer2 = new PrintWriter(txtName, txtBody);
-		
+		writer = new PrintWriter(txtName);
+
 		System.out.println("Enter the text body: ");
-		
-		writer2.println(txtBody);
 		txtBody = keyInput.next();
-		
+		writer = new PrintWriter(txtBody);
 		}
 		
 		catch (Exception e) {
 			System.out.println("The error is" + e);
 		}	
-	}
+	}	
 }
