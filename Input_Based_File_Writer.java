@@ -1,23 +1,36 @@
+//after making some changes it still doesn't store text into .txt file...
+
 import java.util.Scanner;
 import java.io.PrintWriter;
 
-public class Input_Based_File_Writer {
 
+public class Input_Based_File_Writer {
+	public static PrintWriter writer;
+	
+	public void addRecords() {
+		
+	}
+	
 	public static void main(String args[]) {
 
 		Scanner keyInput = new Scanner(System.in);
-		String txtName, txtBody;
+		String txtName, txtBody = null;		
+        
 
+		
 		try {
-
+			
+			
 			System.out.println("Enter the name of .txt file: ");
-			txtName = keyInput.next();
-			PrintWriter writer = new PrintWriter(txtName);
+			txtName = keyInput.nextLine();
+			writer = new PrintWriter(txtName);
 
 			System.out.println("Enter the text body: ");
-			txtBody = keyInput.next();
+			writer.println(txtBody);
+			txtBody = keyInput.nextLine();
 			
-			try {
+			
+			try {	
 				writer.println(txtBody);
 			}
 			catch (Exception e1) {
@@ -27,5 +40,6 @@ public class Input_Based_File_Writer {
 			catch (Exception e) {
 				System.out.println("The error is" + e);
 		}
+		keyInput.close();
 	}
 }
