@@ -1,4 +1,4 @@
-//Now it works but it doesnt count in spaces.
+//Now it works and it counts spaces in strings.
 
 import java.util.Scanner;
 import java.io.PrintWriter;	
@@ -14,10 +14,10 @@ public class Input_Based_File_Writer {
 		try {
 			try {
 				  System.out.println("Enter a name of .txt file: ");
-				  txtName = keyInput.next();
+				  txtName = keyInput.nextLine();
 				writer = new PrintWriter(txtName);
 				System.out.println("Enter a text body: ");
-				txtBody = keyInput.next();
+				txtBody = keyInput.nextLine();
 				writer.println(txtBody);
 				}
 			catch (Exception e) {
