@@ -1,3 +1,5 @@
+//Written by Bullseye198
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,19 +11,23 @@ import java.util.*;
 public class Java_Folder_Deleter {
 
 	static Scanner keyInput = new Scanner(System.in);
-	static Path dir = null;
-	
 	
 	public static void main(String[] args) {
 		
 		System.out.println("Enter folder path: ");			
-
+		
 		try {
-			Files.delete(Paths.get(keyInput.nextLine())); //This object will locate file in the system.  
-			Files.delete(dir);
+			
+			Files.walk(Paths.get(keyInput.nextLine()))
+            	.sorted(Comparator.reverseOrder())
+            	.map(Path::toFile)
+            	//.filter(item -> !item.getPath().equals(keyInput.nextLine()))  This line is not needed.
+            	.forEach(File::delete);
+			System.out.println("Folder deletion successful.");
+			
 		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		System.out.println("Folder deletion successful.");
+			System.out.println("No such folder exists.");
+				//e.printStackTrace();  If you want the whole stack delete the //
+		}		
 	}
 }
