@@ -16,13 +16,12 @@ public class Java_Folder_Deleter {
 		
 		System.out.println("Enter folder path: ");			
 		
-		try {
-			
+		try {			
 			Files.walk(Paths.get(keyInput.nextLine()))
-            	.sorted(Comparator.reverseOrder())
-            	.map(Path::toFile)
-            	//.filter(item -> !item.getPath().equals(keyInput.nextLine()))  This line is not needed.
-            	.forEach(File::delete);
+            			.sorted(Comparator.reverseOrder())
+            			.map(Path::toFile)
+            			//.filter(item -> !item.getPath().equals(keyInput.nextLine()))  This line is not needed.
+            			.forEach(File::delete);
 			System.out.println("Folder deletion successful.");
 			
 		} catch (IOException e) {
