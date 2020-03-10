@@ -9,7 +9,7 @@ public class BasicArrays {
 		
 		//Array 1
 		String[] names = {"Martin","Josh","Krispin"};
-							//0 	//1		//2
+				//0 	//1		//2
 		
 		String output;
 		output = Arrays.toString(names);
